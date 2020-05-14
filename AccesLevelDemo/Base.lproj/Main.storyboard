@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,155 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AccesLevelDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JbV-KG-Ax8" customClass="PlainHorizontalProgressBar" customModule="AccesLevelDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="709" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.98039215690000003" green="0.72941176470000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ElJ-eJ-LO9">
+                                <rect key="frame" x="18" y="810" width="378" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.98039215690000003" green="0.72941176470000002" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="phE-dy-6ed"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSG-PN-2bR" customClass="SideVolume" customModule="AccesLevelDemo" customModuleProvider="target">
+                                <rect key="frame" x="-50" y="119" width="50" height="205"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fbg-rw-8JK">
+                                        <rect key="frame" x="15.5" y="174" width="19" height="18"/>
+                                        <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="5lE-ZX-2se"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fbg-rw-8JK" secondAttribute="bottom" constant="11.5" id="0Dh-RS-uVq"/>
+                                    <constraint firstItem="fbg-rw-8JK" firstAttribute="centerX" secondItem="dSG-PN-2bR" secondAttribute="centerX" id="CJ1-Ye-paV"/>
+                                    <constraint firstAttribute="height" constant="205" id="JDt-ak-KGB"/>
+                                    <constraint firstItem="fbg-rw-8JK" firstAttribute="leading" secondItem="dSG-PN-2bR" secondAttribute="leading" constant="15.5" id="bUR-hx-hD9"/>
+                                    <constraint firstAttribute="trailing" secondItem="fbg-rw-8JK" secondAttribute="trailing" constant="15.5" id="kzF-G7-i5m"/>
+                                    <constraint firstAttribute="width" constant="50" id="qLM-9V-Rlz"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Nci-lE-Yko">
+                                <rect key="frame" x="133" y="430" width="148" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqi-uG-idK">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="volume"/>
+                                        <connections>
+                                            <action selector="showVolume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXX-Ou-T1v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daO-wb-hkt">
+                                        <rect key="frame" x="108" y="0.0" width="40" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="hide"/>
+                                        <connections>
+                                            <action selector="hide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XOr-hL-10d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dSG-PN-2bR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="KmI-BH-QsF"/>
+                            <constraint firstItem="dSG-PN-2bR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="aHh-Kg-2OO"/>
+                            <constraint firstItem="Nci-lE-Yko" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rgo-Ds-ipY"/>
+                            <constraint firstItem="Nci-lE-Yko" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xPg-Ii-lHF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomView" destination="JbV-KG-Ax8" id="zO2-0A-rgR"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="Ai2-9d-gbO"/>
+                        <outlet property="plainHorizontalView" destination="JbV-KG-Ax8" id="xvA-l9-JQR"/>
+                        <outlet property="slideVolumeView" destination="dSG-PN-2bR" id="fYx-aS-aSC"/>
+                        <outlet property="sliderVolumeView" destination="ElJ-eJ-LO9" id="YL7-v6-IzS"/>
+                        <outlet property="speakerImageView" destination="fbg-rw-8JK" id="KiG-XD-YgQ"/>
+                        <outlet property="volumeLeadingConstrints" destination="aHh-Kg-2OO" id="bkS-Jh-4hJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xRH-Nm-5C2">
+            <objects>
+                <viewController id="zwk-YV-kLH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zax-jJ-lIV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UF2-ih-oIr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cAJ-zz-hdt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1298.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRX-EV-nfV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1298.5"/>
+                                                <string key="text">Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+Now to see the horizontal scroll in action, you just need to add enough text to the Label, to make it bigger than the screen. You can do that by selecting the Label and updating the text parameter with a big enough text. Also don’t forget to set the Number Of Lines parameter to 0, in order for the label adjust the number of lines automatically.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cAJ-zz-hdt" firstAttribute="top" secondItem="j4e-Ma-fur" secondAttribute="top" id="446-T2-8Tz"/>
+                                    <constraint firstItem="cAJ-zz-hdt" firstAttribute="width" secondItem="UF2-ih-oIr" secondAttribute="width" id="GlG-6D-chl"/>
+                                    <constraint firstItem="cAJ-zz-hdt" firstAttribute="leading" secondItem="j4e-Ma-fur" secondAttribute="leading" id="Hh6-Qn-2Yu"/>
+                                    <constraint firstItem="cAJ-zz-hdt" firstAttribute="trailing" secondItem="j4e-Ma-fur" secondAttribute="trailing" id="JSp-eu-IAj"/>
+                                    <constraint firstItem="cAJ-zz-hdt" firstAttribute="bottom" secondItem="j4e-Ma-fur" secondAttribute="bottom" id="MfF-XC-f1M"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="j4e-Ma-fur"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="rJA-OS-vGE"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="UF2-ih-oIr" firstAttribute="trailing" secondItem="Oa3-gw-Ffp" secondAttribute="trailing" id="EJ9-xO-UAb"/>
+                            <constraint firstItem="UF2-ih-oIr" firstAttribute="leading" secondItem="Oa3-gw-Ffp" secondAttribute="leading" id="YDy-H2-8Vy"/>
+                            <constraint firstAttribute="bottom" secondItem="UF2-ih-oIr" secondAttribute="bottom" id="mGm-hk-Nka"/>
+                            <constraint firstItem="UF2-ih-oIr" firstAttribute="top" secondItem="zax-jJ-lIV" secondAttribute="top" id="wWl-WZ-Bxe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oa3-gw-Ffp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMO-ox-swl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.5942028985507" y="84.375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="speaker.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

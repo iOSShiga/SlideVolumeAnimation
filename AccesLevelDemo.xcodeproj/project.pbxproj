@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1106D42246D5588000C54F5 /* PlainHorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1106D41246D5588000C54F5 /* PlainHorizontalProgressBar.swift */; };
 		D1E14B36246AB051003E978A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E14B35246AB051003E978A /* AppDelegate.swift */; };
 		D1E14B38246AB051003E978A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E14B37246AB051003E978A /* SceneDelegate.swift */; };
 		D1E14B3A246AB051003E978A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E14B39246AB051003E978A /* ViewController.swift */; };
@@ -15,6 +16,7 @@
 		D1E14B42246AB054003E978A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1E14B40246AB054003E978A /* LaunchScreen.storyboard */; };
 		D1E14B4D246AB055003E978A /* AccesLevelDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E14B4C246AB055003E978A /* AccesLevelDemoTests.swift */; };
 		D1E14B58246AB055003E978A /* AccesLevelDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E14B57246AB055003E978A /* AccesLevelDemoUITests.swift */; };
+		D1E14B68246AB150003E978A /* AccessLevelsPackage in Frameworks */ = {isa = PBXBuildFile; productRef = D1E14B67246AB150003E978A /* AccessLevelsPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1106D41246D5588000C54F5 /* PlainHorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHorizontalProgressBar.swift; sourceTree = "<group>"; };
 		D1E14B32246AB051003E978A /* AccesLevelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesLevelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E14B35246AB051003E978A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1E14B37246AB051003E978A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		D1E14B53246AB055003E978A /* AccesLevelDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccesLevelDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1E14B57246AB055003E978A /* AccesLevelDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccesLevelDemoUITests.swift; sourceTree = "<group>"; };
 		D1E14B59246AB055003E978A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1E14B65246AB0EB003E978A /* AccessLevelsPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AccessLevelsPackage; path = "../../../../Downloads/SwiftAccessLevels-master/AccessLevelsPackage"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1E14B68246AB150003E978A /* AccessLevelsPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +84,12 @@
 		D1E14B29246AB051003E978A = {
 			isa = PBXGroup;
 			children = (
+				D1E14B65246AB0EB003E978A /* AccessLevelsPackage */,
 				D1E14B34246AB051003E978A /* AccesLevelDemo */,
 				D1E14B4B246AB055003E978A /* AccesLevelDemoTests */,
 				D1E14B56246AB055003E978A /* AccesLevelDemoUITests */,
 				D1E14B33246AB051003E978A /* Products */,
+				D1E14B66246AB150003E978A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +109,7 @@
 				D1E14B35246AB051003E978A /* AppDelegate.swift */,
 				D1E14B37246AB051003E978A /* SceneDelegate.swift */,
 				D1E14B39246AB051003E978A /* ViewController.swift */,
+				D1106D41246D5588000C54F5 /* PlainHorizontalProgressBar.swift */,
 				D1E14B3B246AB051003E978A /* Main.storyboard */,
 				D1E14B3E246AB054003E978A /* Assets.xcassets */,
 				D1E14B40246AB054003E978A /* LaunchScreen.storyboard */,
@@ -128,6 +136,13 @@
 			path = AccesLevelDemoUITests;
 			sourceTree = "<group>";
 		};
+		D1E14B66246AB150003E978A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +159,9 @@
 			dependencies = (
 			);
 			name = AccesLevelDemo;
+			packageProductDependencies = (
+				D1E14B67246AB150003E978A /* AccessLevelsPackage */,
+			);
 			productName = AccesLevelDemo;
 			productReference = D1E14B32246AB051003E978A /* AccesLevelDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +279,7 @@
 			files = (
 				D1E14B3A246AB051003E978A /* ViewController.swift in Sources */,
 				D1E14B36246AB051003E978A /* AppDelegate.swift in Sources */,
+				D1106D42246D5588000C54F5 /* PlainHorizontalProgressBar.swift in Sources */,
 				D1E14B38246AB051003E978A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +609,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D1E14B67246AB150003E978A /* AccessLevelsPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AccessLevelsPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1E14B2A246AB051003E978A /* Project object */;
 }
